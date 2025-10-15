@@ -1,0 +1,166 @@
+{
+    "Customers": [
+        {
+            "CustomerId": 101,
+            "FirstName": "Liam",
+            "LastName": "Smith",
+            "PhoneNumber": "+447385920102"
+        },
+        {
+            "CustomerId": 102,
+            "FirstName": "Olivia",
+            "LastName": "Jones",
+            "PhoneNumber": "+447123456789"
+        },
+        {
+            "CustomerId": 103,
+            "FirstName": "Noah",
+            "LastName": "Williams",
+            "PhoneNumber": "+447987654321"
+        },
+        {
+            "CustomerId": 104,
+            "FirstName": "Emma",
+            "LastName": "Brown",
+            "PhoneNumber": "+447456789012"
+        },
+        {
+            "CustomerId": 105,
+            "FirstName": "Oliver",
+            "LastName": "Davies",
+            "PhoneNumber": "+447789012345"
+        },
+        {
+            "CustomerId": 106,
+            "FirstName": "Charlotte",
+            "LastName": "Evans",
+            "PhoneNumber": "+447012345678"
+        },
+        {
+            "CustomerId": 107,
+            "FirstName": "Elijah",
+            "LastName": "Wilson",
+            "PhoneNumber": "+447678901234"
+        },
+        {
+            "CustomerId": 108,
+            "FirstName": "Amelia",
+            "LastName": "Taylor",
+            "PhoneNumber": "+447234567890"
+        },
+        {
+            "CustomerId": 109,
+            "FirstName": "James",
+            "LastName": "Thomas",
+            "PhoneNumber": "+447567890123"
+        },
+        {
+            "CustomerId": 110,
+            "FirstName": "Sophia",
+            "LastName": "Roberts",
+            "PhoneNumber": "+447890123456"
+        }
+    ],
+    "Accounts": [
+        {
+            "AccountId": 10001,
+            "CardPassword": 1234,
+            "AccountName": "Checking Account",
+            "Currency": "EUR",
+            "AccountNumber": 9876543210,
+            "Balance": 1234.56,
+            "OpeningDate": "2023-01-15",
+            "CustomerId": 101
+        },
+        {
+            "AccountId": 10002,
+            "CardPassword": 5678,
+            "AccountName": "Savings Account",
+            "Currency": "GBP",
+            "AccountNumber": 1234567890,
+            "Balance": 5678.90,
+            "OpeningDate": "2022-03-20",
+            "CustomerId": 102
+        },
+        {
+            "AccountId": 10003,
+            "CardPassword": 9012,
+            "AccountName": "Investment Account",
+            "Currency": "USD",
+            "AccountNumber": 2345678901,
+            "Balance": 9012.34,
+            "OpeningDate": "2024-06-01",
+            "CustomerId": 103
+        },
+        {
+            "AccountId": 10004,
+            "CardPassword": 3456,
+            "AccountName": "Checking Account",
+            "Currency": "EUR",
+            "AccountNumber": 3456789012,
+            "Balance": 3456.78,
+            "OpeningDate": "2021-11-10",
+            "CustomerId": 104
+        },
+        {
+            "AccountId": 10005,
+            "CardPassword": 7890,
+            "AccountName": "Savings Account",
+            "Currency": "GBP",
+            "AccountNumber": 4567890123,
+            "Balance": 7890.12,
+            "OpeningDate": "2023-09-05",
+            "CustomerId": 105
+        },
+        {
+            "AccountId": 10006,
+            "CardPassword": 2345,
+            "AccountName": "Investment Account",
+            "Currency": "USD",
+            "AccountNumber": 5678901234,
+            "Balance": 2345.67,
+            "OpeningDate": "2022-07-22",
+            "CustomerId": 106
+        },
+        {
+            "AccountId": 10007,
+            "CardPassword": 6789,
+            "AccountName": "Checking Account",
+            "Currency": "EUR",
+            "AccountNumber": 6789012345,
+            "Balance": 6789.01,
+            "OpeningDate": "2024-02-28",
+            "CustomerId": 107
+        },
+        {
+            "AccountId": 10008,
+            "CardPassword": 0123,
+            "AccountName": "Savings Account",
+            "Currency": "GBP",
+            "AccountNumber": 7890123456,
+            "Balance": 123.45,
+            "OpeningDate": "2021-05-18",
+            "CustomerId": 108
+        },
+        {
+            "AccountId": 10009,
+            "CardPassword": 4567,
+            "AccountName": "Investment Account",
+            "Currency": "USD",
+            "AccountNumber": 8901234567,
+            "Balance": 4567.89,
+            "OpeningDate": "2023-11-30",
+            "CustomerId": 109
+        },
+        {
+            "AccountId": 10010,
+            "CardPassword": 8901,
+            "AccountName": "Checking Account",
+            "Currency": "EUR",
+            "AccountNumber": 9012345678,
+            "Balance": 8901.23,
+            "OpeningDate": "2022-08-01",
+            "CustomerId": 110
+        }
+    ]
+}
