@@ -2,63 +2,85 @@
 
 class Login
 {
-    public static void Control()
+    public static int Control()
     {
-        const byte Attempt = 4;
-
-        for (int i = 0; i < Attempt; i++)
+        try
         {
-            string jsonContent = File.ReadAllText("Database/database.json");
-            dynamic? database = JsonConvert.DeserializeObject<dynamic>(jsonContent);
+            const byte Attempt = 4;
 
-            if (database == null || database.Accounts == null || database.Customers == null)
+            for (int i = 0; i < Attempt; i++)
             {
-                ConsoleManager.WriteColored("\n⚠️ Database loading failed or is empty!", ConsoleColor.Red);
-                return;
-            }
+                string jsonContent = File.ReadAllText("Database/database.json");
+                dynamic database = JsonConvert.DeserializeObject<dynamic>(jsonContent);
 
-            int cardPassword = ConsoleManager.GetInput<int>("\n👉 Please enter your 4-digit card PIN registered with our bank: ");
-
-            bool loginSuccessful = false;
-            int loggedInCustomerId = -1;
-
-            foreach (var account in database.Accounts)
-            {
-                if (account.CardPassword == cardPassword)
+                if (database == null || database.Accounts == null || database.Customers == null)
                 {
-                    loginSuccessful = true;
-                    loggedInCustomerId = (int)account.CustomerId;
-                    break;
+                    ConsoleManager.WriteColored("\n⚠️ Database loading failed or is empty!", ConsoleColor.Red);
+                    return -1; 
                 }
-            }
 
-            if (loginSuccessful)
-            {
-                dynamic? loggedInCustomer = null;
-                foreach (var customer in database.Customers)
+                int cardPassword = ConsoleManager.GetInput<int>(
+                    "\n👉 Please enter your 4-digit card PIN registered with our bank: "
+                );
+
+                bool loginSuccessful = false;
+                int loggedInCustomerId = -1;
+
+                foreach (var account in database.Accounts)
                 {
-                    if (customer.CustomerId == loggedInCustomerId)
+                    int accountPin = (int)account.CardPassword;
+                    if (accountPin == cardPassword)
                     {
-                        loggedInCustomer = customer;
+                        loginSuccessful = true;
+                        loggedInCustomerId = (int)account.CustomerId;
                         break;
                     }
                 }
 
-                if (loggedInCustomer != null)
+                if (loginSuccessful)
                 {
-                    ConsoleManager.WriteColored($"\n✅ Welcome, {loggedInCustomer.FirstName} {loggedInCustomer.LastName}! Login successful.", ConsoleColor.Green);
-                    ConsoleManager.WaitingScreen();
-                    return;
+                    dynamic loggedInCustomer = null;
+
+                    foreach (var customer in database.Customers)
+                    {
+                        if ((int)customer.CustomerId == loggedInCustomerId)
+                        {
+                            loggedInCustomer = customer;
+                            break;
+                        }
+                    }
+
+                    if (loggedInCustomer != null)
+                    {
+                        ConsoleManager.WriteColored(
+                            $"\n✅ Welcome, {loggedInCustomer.FirstName} {loggedInCustomer.LastName}! Login successful.",
+                            ConsoleColor.Green
+                        );
+                        ConsoleManager.WaitingScreen();
+                        return cardPassword; 
+                    }
+                }
+                else
+                {
+                    ConsoleManager.WriteColored(
+                        $"\n❌ Incorrect PIN. You have {Attempt - 1 - i} attempts left.",
+                        ConsoleColor.Red
+                    );
                 }
             }
-            else
-            {
-                ConsoleManager.WriteColored($"\n❌ Incorrect PIN. You have {Attempt - 1 - i} attempts left.", ConsoleColor.Red);
-            }
-        }
 
-        ConsoleManager.WriteColored("\n🔒 Too many failed attempts. Your card has been blocked. Please contact our support.", ConsoleColor.Red);
-        ConsoleManager.WaitingScreen();
-        Environment.Exit(0);
+            ConsoleManager.WriteColored(
+                "\n🔒 Too many failed attempts. Your card has been blocked. Please contact our support.",
+                ConsoleColor.Red
+            );
+            ConsoleManager.WaitingScreen();
+            Environment.Exit(0);
+            return -1; 
+        }
+        catch (Exception ex)
+        {
+            ConsoleManager.WriteColored($"\n⚠️ An error occurred: {ex.Message}", ConsoleColor.Red);
+            return -1; 
+        }
     }
 }
