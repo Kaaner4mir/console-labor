@@ -1,9 +1,10 @@
 ﻿using System.Text;
 
-class Initiazlier
+class Initializer
 {
     public static void Main()
     {
+        Console.Title = "📞 Phone Directory";
         Console.OutputEncoding = Encoding.UTF8;
         Console.InputEncoding = Encoding.UTF8;
 
@@ -20,7 +21,8 @@ class Initiazlier
                     case 2: Operation.Add(); break;
                     case 3: Operation.Update(); break;
                     case 4: Operation.Delete(); break;
-                    case 5: Environment.Exit(0); break;
+                    case 5: Operation.Search(); break;
+                    case 6: Environment.Exit(0); break;
                     default: ConsoleManager.WriteColored("\n⚠️ The operation you want to perform was not found!", ConsoleColor.Yellow); break;
                 }
                 ConsoleManager.WaitingScreen();

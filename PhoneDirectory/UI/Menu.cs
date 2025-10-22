@@ -12,7 +12,8 @@
             ( " 2. Add Person", ConsoleColor.Yellow),
             ( " 3. Update Person", ConsoleColor.Red),
             ( " 4. Delete Person", ConsoleColor.Green),
-            ( " 5. Exit", ConsoleColor.Blue),
+            ( " 5. Search Person", ConsoleColor.Magenta),
+            ( " 6. Exit", ConsoleColor.Blue),
         };
 
         foreach (var item in mainMenuItems)

@@ -109,4 +109,33 @@
         _people.Remove(account);
         ConsoleManager.WriteColored("\n✅ Person successfully deleted", ConsoleColor.Green);
     }
+
+    public static void Search()
+    {
+        Console.Clear();
+
+        string searchTerm = ConsoleManager.GetInput<string>("🔍 Enter the name or surname to search for: ");
+
+        var results = _people.Where(p =>
+            p.FirstName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+            p.LastName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)
+        ).ToList();
+
+        if (results.Any())
+        {
+            ConsoleManager.WriteColored($"\n🔍 Found {results.Count} matching person(s):", ConsoleColor.Cyan);
+            foreach (var item in results)
+            {
+                ConsoleManager.WriteColored($"🔑 ID           : {item.Id}");
+                ConsoleManager.WriteColored($"🏷️ Full Name    : {item.FirstName} {item.LastName}", ConsoleColor.Green);
+                ConsoleManager.WriteColored($"☎️ Phone Number : {item.Number}", ConsoleColor.Red);
+                ConsoleManager.WriteColored($"📝 Notes        : {item.Notes}", ConsoleColor.White);
+                ConsoleManager.WriteColored(new string('-', 50));
+            }
+        }
+        else
+        {
+            ConsoleManager.WriteColored("\n⚠️ No matching persons found.", ConsoleColor.Yellow);
+        }
+    }
 }
