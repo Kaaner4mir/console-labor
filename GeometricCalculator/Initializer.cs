@@ -21,6 +21,9 @@ class Initializer
                 switch (act)
                 {
                     case 1: Perimeter.Calc(); break;
+                    case 2: Area.Calc(); break;
+                    case 3: Volume.Calc(); break;
+                    case 4: Environment.Exit(0);break;
                     default: ConsoleManager.WriteColored("\n❌ You have made an invalid transaction! Please try again."); break;
                 }
                 ConsoleManager.WaitingScreen();
