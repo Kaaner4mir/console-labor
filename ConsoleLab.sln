@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneDirectory", "PhoneDire
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometricCalculator", "GeometricCalculator\GeometricCalculator.csproj", "{4D17BD6B-13F5-4B31-AFB5-738B54957CC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicenseControl", "LicenseControl\LicenseControl.csproj", "{3E575BF6-1389-4601-8A4A-7EAA29B05852}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4D17BD6B-13F5-4B31-AFB5-738B54957CC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D17BD6B-13F5-4B31-AFB5-738B54957CC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D17BD6B-13F5-4B31-AFB5-738B54957CC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E575BF6-1389-4601-8A4A-7EAA29B05852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E575BF6-1389-4601-8A4A-7EAA29B05852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E575BF6-1389-4601-8A4A-7EAA29B05852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E575BF6-1389-4601-8A4A-7EAA29B05852}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
