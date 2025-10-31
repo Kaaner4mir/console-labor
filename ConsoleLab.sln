@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometricCalculator", "Geom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicenseControl", "LicenseControl\LicenseControl.csproj", "{3E575BF6-1389-4601-8A4A-7EAA29B05852}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtmSimulation", "AtmSimulation\AtmSimulation.csproj", "{EF63A6A5-3312-4C56-9BB7-6DF169F6378B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{3E575BF6-1389-4601-8A4A-7EAA29B05852}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E575BF6-1389-4601-8A4A-7EAA29B05852}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E575BF6-1389-4601-8A4A-7EAA29B05852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF63A6A5-3312-4C56-9BB7-6DF169F6378B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF63A6A5-3312-4C56-9BB7-6DF169F6378B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF63A6A5-3312-4C56-9BB7-6DF169F6378B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF63A6A5-3312-4C56-9BB7-6DF169F6378B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
