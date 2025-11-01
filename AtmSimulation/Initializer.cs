@@ -21,6 +21,7 @@ class Initializer
                 {
                     case 1: ShowBalance.Show(); break;
                     case 2: WithdrawMoney.Withdraw(); break;
+                    case 3: DepositMoney.Deposit(); break;
                     case 6: ShowLog.Show(); break;
                     default: ConsoleManager.WriteColored("\n❌ The transaction you want to make is invalid! Please try again."); break;
                 }
