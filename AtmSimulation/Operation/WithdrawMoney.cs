@@ -5,7 +5,7 @@
         Console.Clear();
         ShowBalance.Show();
 
-        int id = ConsoleManager.GetInput<int>("\n👉 Enter the ID of the account from which you want to withdraw money: ");
+        int id = ConsoleManager.GetInput<int>("👉 Enter the ID of the account from which you want to withdraw money: ");
         var account = Data._accounts.FirstOrDefault(x => x.AccountId == id);
 
         if (account == null)
