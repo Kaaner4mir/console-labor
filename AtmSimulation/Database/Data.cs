@@ -1,6 +1,6 @@
 ﻿class Data
 {
-   public static List<Account> _accounts = new List<Account>
+    public static List<Account> _accounts = new List<Account>
         {
             new Account
             {
@@ -21,5 +21,7 @@
                 OpeningDate = new DateTime(2024, 1, 20)
             }
         };
+    public static List<Log> _logs = new List<Log>();
 }
+
 

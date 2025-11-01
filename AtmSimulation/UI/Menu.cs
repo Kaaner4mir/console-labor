@@ -11,7 +11,8 @@
             ( "🫳 3. Deposit Money", ConsoleColor.DarkYellow),
             ( "💸 4. Money Transfer", ConsoleColor.Green),
             ( "📃 5. Bill Payment", ConsoleColor.White),
-            ( "🔚 6. Exit", ConsoleColor.Magenta),
+            ( "🔔 6. Account Activity", ConsoleColor.Yellow),
+            ( "🔚 7. Exit", ConsoleColor.Magenta),
        };
 
         foreach (var item in mainMenuItems)
