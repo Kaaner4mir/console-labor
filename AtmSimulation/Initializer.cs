@@ -19,9 +19,10 @@ class Initializer
 
                 switch (act)
                 {
-                    case 1: ShowBalance.Show(); break;
+                    case 1: ShowBalance.ListAccount(); break;
                     case 2: WithdrawMoney.Withdraw(); break;
                     case 3: DepositMoney.Deposit(); break;
+                    case 4: MoneyTransfer.Transfer(); break;
                     case 6: ShowLog.Show(); break;
                     default: ConsoleManager.WriteColored("\n❌ The transaction you want to make is invalid! Please try again."); break;
                 }
