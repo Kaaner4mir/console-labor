@@ -21,6 +21,35 @@
                 OpeningDate = new DateTime(2024, 1, 20)
             }
         };
+
+    public static List<ForeignAccount> _foreignaccounts = new List<ForeignAccount>()
+    {
+        new ForeignAccount
+        {
+            AccountId= Random.Shared.Next(10000,99999),
+            Branch="Galway",
+            Currency="€",
+        },
+        new ForeignAccount
+        {
+            AccountId= Random.Shared.Next(10000,99999),
+            Branch="Dublin",
+            Currency="€",
+        },
+        new ForeignAccount
+        {
+            AccountId= Random.Shared.Next(10000,99999),
+            Branch="Limerick",
+            Currency="€",
+        },
+        new ForeignAccount
+        {
+            AccountId= Random.Shared.Next(10000,99999),
+            Branch="London",
+            Currency="€",
+        }
+    };
+
     public static List<Log> _logs = new List<Log>();
 }
 

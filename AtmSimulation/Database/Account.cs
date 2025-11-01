@@ -7,3 +7,10 @@
     public decimal Balance { get; set; }
     public DateTime OpeningDate { get; set; }
 }
+
+class ForeignAccount
+{
+    public int AccountId { get; set; }
+    public string? Branch { get; set; }
+    public string? Currency { get; set; }
+}
