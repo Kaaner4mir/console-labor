@@ -3,7 +3,7 @@
     public static void Deposit()
     {
         Console.Clear();
-        ShowBalance.Show();
+        ShowBalance.ListAccount();
 
         int id = ConsoleManager.GetInput<int>("👉 Enter the ID of the account from which you want to deposit money: ");
         var account = Data._accounts.FirstOrDefault(x => x.AccountId == id);
@@ -27,7 +27,7 @@
         string type = "Deposit";
         decimal amount = depositAmount;
 
-        ConsoleManager.WriteColored($"\n💰 The deposit was successful. New Balance: {account.Balance}", ConsoleColor.Green);
+        ConsoleManager.WriteColored($"\n💰 The deposit was successful. New Balance: {account.Currency}{account.Balance}", ConsoleColor.Green);
 
         Logger.AddLog(type, amount);
     }
