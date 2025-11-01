@@ -3,7 +3,7 @@
     public static void Withdraw()
     {
         Console.Clear();
-        ShowBalance.Show();
+        ShowBalance.ListAccount();
 
         int id = ConsoleManager.GetInput<int>("👉 Enter the ID of the account from which you want to withdraw money: ");
         var account = Data._accounts.FirstOrDefault(x => x.AccountId == id);
@@ -33,7 +33,7 @@
         string type = "Withdrawal";
         decimal amount = withdrawAmount;
 
-        ConsoleManager.WriteColored($"\n💰 The withdrawal was successful. New Balance: {account.Balance}", ConsoleColor.Green);
+        ConsoleManager.WriteColored($"\n💰 The withdrawal was successful. New Balance: {account.Currency}{account.Balance}", ConsoleColor.Green);
 
         Logger.AddLog(type,amount);
     }
