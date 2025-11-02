@@ -20,4 +20,23 @@
             ConsoleManager.WriteColored(item.text, item.Color);
         }
     }
+
+    public static void BillPaymentMenu()
+    {
+        var mainMenuItems = new (string text, ConsoleColor Color)[]
+       {
+            ( " <<  Main Menu >>\n", ConsoleColor.Gray),
+
+            ( "⚡ 1. Electricity  €78", ConsoleColor.Yellow),
+            ( "💧 2. Water        €49", ConsoleColor.Blue),
+            ( "♨️ 3. Gas          €90", ConsoleColor.Green),
+            ( "📱 4. Phone Mone   €61", ConsoleColor.White),
+            ( "🛜 5. Internet     €120", ConsoleColor.Cyan),
+       };
+
+        foreach (var item in mainMenuItems)
+        {
+            ConsoleManager.WriteColored(item.text, item.Color);
+        }
+    }
 }
