@@ -1,6 +1,4 @@
-﻿using System.Security.Principal;
-
-class MoneyTransfer
+﻿class MoneyTransfer
 {
     public static void Transfer()
     {
