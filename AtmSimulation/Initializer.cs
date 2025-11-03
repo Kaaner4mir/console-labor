@@ -23,8 +23,9 @@ class Initializer
                     case 2: WithdrawMoney.Withdraw(); break;
                     case 3: DepositMoney.Deposit(); break;
                     case 4: MoneyTransfer.Transfer(); break;
-                    case 5: BillPayment.Payment(); break;   
+                    case 5: BillPayment.Payment(); break;
                     case 6: ShowLog.Show(); break;
+                    case 7: ExitAction.Exit(); break;
                     default: ConsoleManager.WriteColored("\n❌ The transaction you want to make is invalid! Please try again."); break;
                 }
                 ConsoleManager.WaitingScreen();
