@@ -4,12 +4,40 @@ class Initializer
 {
     public static void Main()
     {
+        int registeredId = 1111;
+        byte attemept = 0;
+
         Console.InputEncoding = Encoding.UTF8;
         Console.OutputEncoding = Encoding.UTF8;
         Console.Title = "🏧 Automated Teller Machine";
 
         try
         {
+            while (attemept <= 5)
+            {
+                int password = ConsoleManager.GetInput<int>("\n👤 Enter your 4-digit card password registered with your bank: ");
+
+                if (password != registeredId)
+                {
+                    ConsoleManager.WriteColored($"❌ Wrong password! Please try again. Remaining: {5 - attemept}", ConsoleColor.Yellow);
+                    attemept++;
+                }
+                else
+                {
+                    ConsoleManager.WriteColored($"\n👤 Welcome Dear Customer", ConsoleColor.Green);
+                    ConsoleManager.WaitingScreen();
+                    break;
+                }
+            }
+            if (attemept == 6)
+            {
+                ConsoleManager.WriteColored("\n⚠️ Your card has been blocked for security reasons. Please contact customer service as soon as possible", ConsoleColor.Red);
+                ConsoleManager.WaitingScreen();
+                return;
+            }
+
+            ConsoleManager.SpinnerAnimation();
+
             while (true)
             {
                 Console.Clear();
