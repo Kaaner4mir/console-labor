@@ -13,11 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicenseControl", "LicenseCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtmSimulation", "AtmSimulation\AtmSimulation.csproj", "{EF63A6A5-3312-4C56-9BB7-6DF169F6378B}"
 EndProject
-<<<<<<< HEAD
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentingCarSystem", "RentingCarSystem\RentingCarSystem.csproj", "{78B9D887-EE09-4F2C-A734-00C785817192}"
-EndProject
-=======
->>>>>>> 4d69480 (docs: redesign)
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,13 +39,6 @@ Global
 		{EF63A6A5-3312-4C56-9BB7-6DF169F6378B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF63A6A5-3312-4C56-9BB7-6DF169F6378B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF63A6A5-3312-4C56-9BB7-6DF169F6378B}.Release|Any CPU.Build.0 = Release|Any CPU
-<<<<<<< HEAD
-		{78B9D887-EE09-4F2C-A734-00C785817192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{78B9D887-EE09-4F2C-A734-00C785817192}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{78B9D887-EE09-4F2C-A734-00C785817192}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{78B9D887-EE09-4F2C-A734-00C785817192}.Release|Any CPU.Build.0 = Release|Any CPU
-=======
->>>>>>> 4d69480 (docs: redesign)
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
